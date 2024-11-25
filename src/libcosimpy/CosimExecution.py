@@ -135,7 +135,7 @@ class CosimExecution(Structure):
             except ValueError as error:
                 raise ValueError("Step size must be an int convertible")
 
-        assert (step_size > 0), \
+        assert (step_size_int > 0), \
             "Step size must be a positive and non-zero integer"
 
         execution_create = Wrapper.wrap_function(lib=CosimLibrary.lib, funcname='cosim_execution_create',
