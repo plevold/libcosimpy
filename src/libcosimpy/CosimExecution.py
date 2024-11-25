@@ -36,7 +36,7 @@ class CosimExecution(Structure):
 
         self.__multiple_steps = Wrapper.wrap_function(lib=CosimLibrary.lib, funcname='cosim_execution_step',
                                                       argtypes=[POINTER(CosimExecution), c_int64],
-                                                      restype=None)
+                                                      restype=c_int)
         self.__add_local_slave = Wrapper.wrap_function(lib=CosimLibrary.lib, funcname='cosim_execution_add_slave',
                                                        argtypes=[POINTER(CosimExecution),
                                                                  POINTER(CosimSlave.CosimLocalSlave)],
