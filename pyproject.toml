@@ -41,8 +41,8 @@ dependencies = [
     "patchelf>=0.17.2; platform_system == 'Linux'"
 ]
 
-[tool.hatch.build.targets.wheel.force-include]
-"build/libcosimc" = "src/libcosimpy/libcosimc"
+# [tool.hatch.build.targets.wheel.force-include]
+# "build/libcosimc" = "src/libcosimpy/libcosimc"
 
 [tool.cibuildwheel.linux]
 before-all = "yum install -y libatomic"
